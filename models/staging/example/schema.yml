@@ -19,3 +19,11 @@ models:
         data_tests:
           - unique
           - not_null
+
+
+sources:
+  - name: raw
+    database: raw
+    schema: public
+    tables:
+      - name: example_teams

@@ -38,3 +38,6 @@ models:
       example:
         +materialized: table
       
+seeds:
+  dbt_demo:
+    +schema: staging
