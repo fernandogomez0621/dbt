@@ -10,7 +10,8 @@ final as (
     select
         t.team,
         l.city,
-        l.state
+        l.state,
+        t.team ='{{var("current_champion")}}' as is_champion
     from teams t
     left join locations l
         on t.team = l.name
