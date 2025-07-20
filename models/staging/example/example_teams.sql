@@ -3,29 +3,23 @@
     query_tag = 'demo_dbt_tag_holamundo'
 ) }}
 
-select
-    'Clippers' as team
+with teams as (
 
-union all
+    select 'Clippers' as team
+    union all
+    select '76ers'
+    union all
+    select 'Heat'
+    union all
+    select 'Bulls'
+    union all
+    select 'America de Cali'
+    union all
+    select 'Cali'
 
-select
-    '76ers' as team
-
-union all
-
-select
-    'Heat' as team
-
-union all
-
-select
-    'Bulls' as team
-
-union all
+)
 
 select
-    'America de Cali' as team
-union all
-
-select
-    'Cali' as team
+    *,
+    {{ dbt_music_data.new_macro('Mike') }} as test_col
+from teams
