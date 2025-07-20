@@ -21,5 +21,6 @@ with teams as (
 
 select
     *,
-    {{ dbt_music_data.new_macro('Mike') }} as test_col
+    {{ dbt_music_data.new_macro('Mike') }} as test_col,
+    '{{invocation_id}}' as Inovacation_id
 from teams
