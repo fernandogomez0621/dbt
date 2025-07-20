@@ -20,3 +20,12 @@ union all
 
 select
     'Bulls' as team
+
+union all
+
+select
+    'America de Cali' as team
+union all
+
+select
+    'Cali' as team
